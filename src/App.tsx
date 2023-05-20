@@ -1,57 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import "./App.css";
+import imagemSetores from "./assets/image/imagemSetores.svg";
+import { Input, Button } from "antd";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+      <main>
+        <div className="header">
+          <div className="header-logo">
+            <img
+              className="img-logo"
+              src={imagemSetores}
+              alt="imagem ilustrativa"
+            />
+            <p>Setores</p>
+          </div>
+        </div>
+
+        <section className="mainSection">
+          <div className="sectors">
+            <h1>Setores</h1>
+          </div>
+          <div className="addSector">
+            <h1>Adicionar Setor</h1>
+
+            <p>Nome:</p>
+            <Input placeholder=" Nome do Setor" />
+            <div className="cargos">
+              <p>Cargo(s):</p>
+              <Input placeholder=" Nome do Setor" />
+              <Button type="primary">adicionar</Button>
+            </div>
+            <Button type="primary">Salvar</Button>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 
