@@ -1,6 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import { Provider } from "react-redux";
+import { store } from "./store/index";
 import reportWebVitals from "./reportWebVitals";
 import { ConfigProvider } from "antd";
 import ptBR from 'antd/lib/locale/pt_BR'
@@ -10,9 +12,11 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <ConfigProvider locale={ptBR}>
         <App />
     </ConfigProvider>
+    </Provider>
   </React.StrictMode>
 );
 
